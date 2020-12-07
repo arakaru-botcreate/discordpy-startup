@@ -4,6 +4,14 @@ import os
 token = os.environ['DISCORD_BOT_TOKEN']
 client = discord.Client()
 
+
+@client.event
+async def on_message(message):
+    if message.author.bot:
+        return
+    if message.centent == "start":
+        await message.cnannel.send("ここにリアクションを付ける")
+
 @client.event
 async def on_raw_reaction_add(payload):
 
