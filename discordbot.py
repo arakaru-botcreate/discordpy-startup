@@ -7,7 +7,7 @@ client = discord.Client()
 @client.event
 async def on_raw_reaction_add(payload):
 
-    if payload.message_id == ID:
+    if payload.message_id == 785335000580751390:
 
         print(payload.emoji.name)
         guild_id = payload.guild_id
@@ -25,7 +25,7 @@ async def on_raw_reaction_add(payload):
 
 @client.event
 async def on_raw_reaction_remove(payload):
-    if payload.message_id == ID:
+    if payload.message_id == 785335000580751390:
         print(payload.emoji.name)
 
         guild_id = payload.guild_id
