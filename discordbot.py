@@ -9,7 +9,7 @@ client = discord.Client()
 async def on_message(message):
     if message.author.bot:
         return
-    if message.centent == "start":
+    if message.content == "start":
         await message.cnannel.send("ここにリアクションを付ける")
 
 @client.event
