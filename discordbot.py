@@ -1,7 +1,6 @@
 import discord
 import random
 client = discord.Client()
-token = os.environ['DISCORD_BOT_TOKEN']
 random_contents = [
     "にゃーん",
     "わん！",
@@ -29,4 +28,4 @@ async def on_message(message):
         await message.channel.send("おはよう！！")
 
 
-client.run(token)
+client.run(Nzg1Mjk5MjkyOTY0OTEzMTkz.X8109Q.GlK3dj63yzyOS5eJHUy3iLRgFvo)
