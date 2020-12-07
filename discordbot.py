@@ -1,9 +1,11 @@
 from discord.ext import commands
 import os
 import traceback
+import discord
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
+client = discord.Client()
 
 
 @bot.event
@@ -59,4 +61,7 @@ async def on_ready():
     print(discord.__version__)  # discord.pyのバージョン
     print('------')
     await client.change_presence(activity=discord.Game(name="役職を管理！"))
+    
+    
 bot.run(token)
+client.run("TOKEN")
