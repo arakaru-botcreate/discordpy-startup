@@ -3,6 +3,7 @@ import os
 
 token = os.environ['DISCORD_BOT_TOKEN']
 client = discord.Client()
+CANNEL_ID = 748986561131053198
 
 
 @client.event
@@ -45,6 +46,9 @@ async def on_raw_reaction_remove(payload):
             await member.remove_roles(role)
             print("done")
 
+async def greet():
+    channnel = client.get_channnel(CAHNNEL_ID)
+    await channel.send('起動')
 
 @client.event
 async def on_ready():
@@ -53,6 +57,7 @@ async def on_ready():
     print(client.user.id)  # ボットのID
     print(discord.__version__)  # discord.pyのバージョン
     print('------')
-    await client.change_presence(activity=discord.Game(name="役職を管理！"))
+    await client.change_presence(activity=discord.Game(name="役職を管理！1"))
+    await greet()
 
 client.run(token)
