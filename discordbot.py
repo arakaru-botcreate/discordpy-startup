@@ -22,7 +22,7 @@ async def ping(ctx):
 @client.event
 async def on_raw_reaction_add(payload):
 
-    if payload.message_id == ID:
+    if payload.message_id == 785323567381217320:
 
         print(payload.emoji.name)
         guild_id = payload.guild_id
