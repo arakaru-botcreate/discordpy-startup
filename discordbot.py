@@ -29,4 +29,4 @@ async def on_message(message):
         await message.channel.send("おはよう！！")
 
 
-client.run("あなたのbotのトークン")
+client.run(token)
