@@ -19,6 +19,8 @@ async def ping(ctx):
 
 @bot.command()
 async def test(ctx):
-    await ctx.send('にゃんちゅう')
+    emoji = '\N{THUMBS UP SIGN}'
+    # or '\U0001f44d' or '👍'
+    await message.add_reaction(emoji)
 
 bot.run(token)
