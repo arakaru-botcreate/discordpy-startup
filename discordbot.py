@@ -47,7 +47,7 @@ async def on_raw_reaction_remove(payload):
             print("done")
 
 async def greet():
-    channnel = client.get_channnel(CAHNNEL_ID)
+    channnel = client.get_channel(CANNEL_ID)
     await channel.send('起動')
 
 @client.event
